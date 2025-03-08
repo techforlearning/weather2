@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="./weather.css">
+<div id="location"><a href="https://www.jma.go.jp/bosai/forecast/" target="_blank">気象庁のデータを元に作成</a></div>
+<div class="weatherForecast">
+  <div class="weather">
+    <div class="date">--/--(-)</div>
+    <img class="weatherImg">
+    <div class="weatherTelop">--</div>
+    <div><span class="tempMin">-℃</span>/<span class="tempMax">-℃</span></div>
+  </div>
+</div>
+<script>
+  for (let i = 0; i < 6; i++) {
+    const el = document.querySelector('.weather').cloneNode(true);
+    document.querySelector('.weatherForecast').appendChild(el);
+  }
+</script>
+<script src="./weather.js"></script>
