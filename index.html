@@ -1,17 +1,24 @@
-<link rel="stylesheet" href="./weather.css">
-<div id="location"><a href="https://www.jma.go.jp/bosai/forecast/" target="_blank">気象庁のデータを元に作成</a></div>
-<div class="weatherForecast">
-  <div class="weather">
-    <div class="date">--/--(-)</div>
-    <img class="weatherImg">
-    <div class="weatherTelop">--</div>
-    <div><span class="tempMin">-℃</span>/<span class="tempMax">-℃</span></div>
-  </div>
-</div>
-<script>
-  for (let i = 0; i < 6; i++) {
-    const el = document.querySelector('.weather').cloneNode(true);
-    document.querySelector('.weatherForecast').appendChild(el);
-  }
-</script>
-<script src="./weather.js"></script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>週間天気予報</title>
+    <link rel="stylesheet" href="./weather.css">
+</head>
+<body>
+    <div class="header">週間天気</div>
+
+    <div class="weatherForecast">
+        <!-- JSで追加するので空の状態にしておく -->
+    </div>
+
+    <div class="footer">
+        <a href="https://www.jma.go.jp/bosai/forecast/" target="_blank">
+            気象庁: 東京地方 気象庁のデータを元に作成
+        </a>
+    </div>
+
+    <script src="./weather.js"></script>
+</body>
+</html>
